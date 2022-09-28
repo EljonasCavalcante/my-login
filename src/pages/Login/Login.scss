@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+div #login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 2rem;
+    .form {
+        background-color: rgba(173, 172, 169, 0.24);
+        width: 100%;
+        max-width: 488px;
+        padding: 0.5rem;
+    }
+    .field {
+        padding-bottom: 0.5rem;
+    }
+    .field label {
+        display: block;
+    }
+    .field input {
+        width: 100%;
+    }
+    .actions {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
