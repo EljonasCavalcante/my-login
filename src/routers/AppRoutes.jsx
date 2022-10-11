@@ -1,4 +1,6 @@
 // yarn add react-router-dom
+
+import React from "react";
 import {
     BrowserRouter as Router,
     Route,
@@ -6,15 +8,18 @@ import {
     Navigate,
 } from "react-router-dom";
 import HomePage from "../pages/Home/Home";
-import Login from "../pages/Login/Login";
+import LoginPage from "../pages/Login/Login";
+import { AuthProvicer } from "../contexts/auth";
 
 const AppRoutes = () => {
     return(
         <Router>
-            <Routes>
-                <Route exact path="/login" element={<Login/>} />
-                <Route exact path="/login" element={<HomePage/>} />
-            </Routes>
+            <AuthProvicer>
+                <Routes>
+                    <Route exact path="/login" element={<LoginPage/>} />
+                    <Route exact path="/" element={<HomePage/>} />
+                </Routes>
+            </AuthProvicer>
         </Router>
     )
 };
