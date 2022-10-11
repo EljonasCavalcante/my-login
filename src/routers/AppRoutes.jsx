@@ -9,17 +9,17 @@ import {
 } from "react-router-dom";
 import HomePage from "../pages/Home/Home";
 import LoginPage from "../pages/Login/Login";
-import { AuthProvicer } from "../contexts/auth";
+import { AuthProvider } from "../contexts/auth";
 
 const AppRoutes = () => {
     return(
         <Router>
-            <AuthProvicer>
+            <AuthProvider>
                 <Routes>
                     <Route exact path="/login" element={<LoginPage/>} />
                     <Route exact path="/" element={<HomePage/>} />
                 </Routes>
-            </AuthProvicer>
+            </AuthProvider>
         </Router>
     )
 };

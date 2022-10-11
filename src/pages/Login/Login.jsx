@@ -13,10 +13,9 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('submit', {email, password});
-
-        login(email,password);
-        
-    }
+        login(email,password);        
+    };
+    
     return(
         <div id="login">
             <h1 className="title">Login do Sistema</h1>           
